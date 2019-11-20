@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Table } from 'antd';
+import { Table, Icon, Switch, Radio, Form, Divider } from 'antd';
 import '../../../node_modules/antd/dist/antd.css';
 
 interface Props {
@@ -7,7 +7,7 @@ interface Props {
   dataSource?: Array<Object>,
 }
 
-class List extends React.Component<Props> {
+class TableComponent extends React.Component<Props> {
   render() {
     const { columns, dataSource } = this.props;
   
@@ -22,4 +22,4 @@ class List extends React.Component<Props> {
   }
 }
 
-export default List;
+export default TableComponent;

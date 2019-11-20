@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 
-import List from '../common/List';
+import TableComponent from '../common/TableComponent';
 
 import columns from './__mocks__/columns.json';
 import data from './__mocks__/data.json';
@@ -29,7 +29,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="home">
-      <List
+      <TableComponent
         columns={columns}
         dataSource={parseData(data)}
       />
