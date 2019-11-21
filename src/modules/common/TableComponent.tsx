@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Table, Icon, Switch, Radio, Form, Divider } from 'antd';
+import { Table } from 'antd';
 import '../../../node_modules/antd/dist/antd.css';
 
 interface Props {
@@ -8,15 +8,30 @@ interface Props {
 }
 
 class TableComponent extends React.Component<Props> {
+  state = {
+    selectedRowKeys: [],
+  };
+
+  onSelectChange = (selectedRowKeys: Array<Object>) => this.setState({ selectedRowKeys });
+
   render() {
     const { columns, dataSource } = this.props;
-  
+    const { selectedRowKeys } = this.state;
+
+    const rowSelection = {
+      selectedRowKeys,
+      onChange: this.onSelectChange,
+    };
+
     return (
       <Table
+        bordered={true}
         columns={columns}
         dataSource={dataSource}
         pagination={{ pageSize: 100 }}
+        rowSelection={rowSelection}
         scroll={{ y: 800 }}
+        size="middle"
       />
     );
   }
