@@ -14,6 +14,13 @@ class TableComponent extends React.Component<Props> {
 
   onSelectChange = (selectedRowKeys: Array<Object>) => this.setState({ selectedRowKeys });
 
+  handleChange = (pagination: any, filters: any, sorter: any) => {
+    this.setState({
+      filteredInfo: filters,
+      sortedInfo: sorter,
+    });
+  };
+  
   render() {
     const { columns, dataSource } = this.props;
     const { selectedRowKeys } = this.state;
@@ -28,6 +35,7 @@ class TableComponent extends React.Component<Props> {
         bordered={true}
         columns={columns}
         dataSource={dataSource}
+        onChange={this.handleChange}
         pagination={{ pageSize: 100 }}
         rowSelection={rowSelection}
         scroll={{ y: 800 }}
