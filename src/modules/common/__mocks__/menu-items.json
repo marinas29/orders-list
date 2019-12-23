@@ -1,0 +1,27 @@
+[
+  {
+    "icon": "search",
+    "key": "0",
+    "title": "Search"
+  },
+  {
+    "icon": "unordered-list",
+    "key": "1",
+    "title": "Pedidos"
+  },
+  {
+    "icon": "search",
+    "key": "2",
+    "title": "Rota"
+  },
+  {
+    "icon": "car",
+    "key": "3",
+    "title": "Motoristas"
+  },
+  {
+    "icon": "printer",
+    "key": "4",
+    "title": "Impressão"
+  }
+]
